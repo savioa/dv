@@ -3,12 +3,13 @@ document.getElementsByTagName("input")[0].focus();
 document.getElementsByTagName("input")[0].addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        document.getElementsByClassName("button")[0].click();
+        document.getElementsByClassName("tui-button")[0].click();
     }
 });
 
+document.getElementsByClassName("tui-button")[0].addEventListener("click", function () {
+    document.getElementById("resultado").innerText = "";
 
-document.getElementsByClassName("button")[0].addEventListener("click", function () {
     let raiz = document.getElementsByTagName("input")[0].value;
 
     raiz = raiz.split(".").join("").split("/").join("").split("-").join("");
@@ -19,10 +20,12 @@ document.getElementsByClassName("button")[0].addEventListener("click", function 
         case "cnpj":
             if (isNaN(raiz)) {
                 window.alert("Informe o CNPJ apenas com dígitos.");
+                return;
             }
 
             if (raiz.length > 8) {
                 window.alert("Informe apenas a raiz do CNPJ.");
+                return;
             }
 
             raiz = raiz.padStart(8, "0") + "0001";
@@ -34,10 +37,12 @@ document.getElementsByClassName("button")[0].addEventListener("click", function 
         case "estab":
             if (isNaN(raiz)) {
                 window.alert("Informe o CNPJ apenas com dígitos.");
+                return;
             }
 
             if (raiz.length > 12) {
                 window.alert("Informe apenas a raiz do CNPJ.");
+                return;
             }
 
             raiz = raiz.padStart(12, "0");
@@ -49,10 +54,12 @@ document.getElementsByClassName("button")[0].addEventListener("click", function 
         case "cpf":
             if (isNaN(raiz)) {
                 window.alert("Informe o CPF apenas com dígitos.");
+                return;
             }
 
             if (raiz.length > 9) {
                 window.alert("Informe apenas a raiz do CPF.");
+                return;
             }
 
             raiz = raiz.padStart(9, "0");

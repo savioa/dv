@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="tui-bg-blue-black">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dígito Verificador</title>
-  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-  <style>
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dígito Verificador</title>
+    <link href="https://cdn.jsdelivr.net/npm/tuicss@2.1.2/dist/tuicss.min.css" rel="stylesheet">
+    <style>
+    </style>
 </head>
 
 <body>
-  <main class="container">
-    <form>
-      <fieldset>
-        <p class="grouped">
-          <select name="cadastro">
-            <option value="cnpj" selected>CNPJ</option>
-            <option value="estab">Estabelecimento</option>
-            <option value="cpf">CPF</option>
-          </select>
-          <input type="number" placeholder="Raiz" />
-          <a href="#" class="button">Calcular</a>
-        </p>
-      </fieldset>
-    </form>
-    <p id="resultado"></p>
-  </main>
-  <script src="index.js"></script>
+    <main class="container content">
+        <div class="tui-window">
+            <fieldset class="tui-fieldset">
+                <legend>Dígito Verificador</legend>
+                <div class="content">
+                    <select id="cadastro" class="tui-input">
+                        <option value="cnpj" selected>CNPJ</option>
+                        <option value="estab">Estabelecimento</option>
+                        <option value="cpf">CPF</option>
+                    </select>
+                </div>
+                <div class="content">
+                    <input id="numero" class="tui-input" type="number" placeholder="Raiz">
+                </div>
+                <div class="content">
+                    <a href="#" class="tui-button">Calcular</a>
+                </div>
+                <p id="resultado" class="content"></p>
+            </fieldset>
+        </div>
+        <div class="tui-statusbar">
+            <ul>
+                <li><a href="https://github.com/savioa/dv">dv em github.com/savioa</a></li>
+            </ul>
+        </div>
+    </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
