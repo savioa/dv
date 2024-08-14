@@ -18,11 +18,6 @@ document.getElementsByClassName("tui-button")[0].addEventListener("click", funct
 
     switch (document.getElementsByTagName("select")[0].value) {
         case "cnpj":
-            if (isNaN(raiz)) {
-                window.alert("Informe o CNPJ apenas com dígitos.");
-                return;
-            }
-
             if (raiz.length > 8) {
                 window.alert("Informe apenas a raiz do CNPJ.");
                 return;
@@ -35,11 +30,6 @@ document.getElementsByClassName("tui-button")[0].addEventListener("click", funct
             break;
 
         case "estab":
-            if (isNaN(raiz)) {
-                window.alert("Informe o CNPJ apenas com dígitos.");
-                return;
-            }
-
             if (raiz.length > 12) {
                 window.alert("Informe apenas a raiz do CNPJ.");
                 return;
@@ -80,7 +70,7 @@ function dvCnpj(raiz) {
     var digito = 0;
 
     for (var i = 0; i < 12; i++) {
-        digito = parseInt(raiz[i]);
+        digito = raiz[i].charCodeAt() - 48;
         soma1 += digito * pesos[i + 1];
         soma2 += digito * pesos[i]
     }
