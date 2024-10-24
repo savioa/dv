@@ -25,7 +25,7 @@ document.getElementsByClassName("tui-button")[0].addEventListener("click", funct
 
             raiz = raiz.padStart(8, "0") + "0001";
 
-            dv = dvCnpj(raiz);
+            dv = dvCnpj(raiz.toUpperCase());
 
             break;
 
@@ -37,7 +37,7 @@ document.getElementsByClassName("tui-button")[0].addEventListener("click", funct
 
             raiz = raiz.padStart(12, "0");
 
-            dv = dvCnpj(raiz);
+            dv = dvCnpj(raiz.toUpperCase());
 
             break;
 
