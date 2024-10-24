@@ -59,7 +59,7 @@ document.getElementsByClassName("tui-button")[0].addEventListener("click", funct
             break;
     }
 
-    document.getElementById("resultado").innerText = raiz + dv;
+    document.getElementById("resultado").innerText = raiz.toUpperCase() + dv;
 });
 
 function dvCnpj(raiz) {
