@@ -1,3 +1,10 @@
+const hash = window.location.hash.slice(1);
+
+if (hash) {
+  document.getElementById('numero').value = hash;
+  document.querySelector('.tui-button').click();
+}
+
 document.getElementsByTagName("input")[0].focus();
 
 document.getElementsByTagName("input")[0].addEventListener("keypress", function (event) {
