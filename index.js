@@ -1,10 +1,3 @@
-const hash = window.location.hash.slice(1);
-
-if (hash) {
-  document.getElementById('numero').value = hash;
-  document.getElementsByClassName("tui-button")[0].click();
-}
-
 document.getElementsByTagName("input")[0].focus();
 
 document.getElementsByTagName("input")[0].addEventListener("keypress", function (event) {
@@ -68,6 +61,13 @@ document.getElementsByClassName("tui-button")[0].addEventListener("click", funct
 
     document.getElementById("resultado").innerText = raiz.toUpperCase() + dv;
 });
+
+const hash = window.location.hash.slice(1);
+
+if (hash) {
+  document.getElementById('numero').value = hash;
+  document.getElementsByClassName("tui-button")[0].click();
+}
 
 function dvCnpj(raiz) {
     var pesos = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
