@@ -2,7 +2,7 @@ const hash = window.location.hash.slice(1);
 
 if (hash) {
   document.getElementById('numero').value = hash;
-  document.querySelector('.tui-button').click();
+  document.getElementsByClassName("tui-button")[0].click();
 }
 
 document.getElementsByTagName("input")[0].focus();
